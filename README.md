@@ -64,3 +64,16 @@ $ terraform destroy #delete the VM
 
                 }
           }
+ 
+ - Apply Variables - Variable files
+```sh 
+ terraform apply -var "name=jenkins"
+ terraform apply -var-file=variables/jenkins.tfvars
+```
+
+- Example of a .tfvars file
+```sh
+name = "jenkins"
+user = "ab"
+script = [ "terrascripts/packages.sh" ]
+```
