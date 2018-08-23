@@ -99,3 +99,25 @@ terravm:
  - After that just execute the command:
  
         make terravm
+
+- Improving your Makefile:
+```sh
+.PHONY = terrainit terraplan terravm terrade
+script_path = "variables"
+script_tfvars = "python.tfvars"
+
+#initialize a working directory-configuration files
+terrainit:
+        @terraform init
+
+terraplan:       
+        @terraform plan
+        
+#create-apply a VM
+terravm:
+        @terraform apply -auto-approve -var-file=${script_path}/${script_tfvars}
+        
+#destroy the VM
+terrade:
+        @terraform destroy
+```
