@@ -3,9 +3,11 @@
 - 00_default : all the variables that we have defined and call from the 02_resources.tf file
 - 01_provider: creates the bond of our project with our credentials and our region
 - 02_resources: template description of the VM (image, name, networking, ssh, scripts)
+- 03_firewall_resource: contain the firewall rules that we want to apply
 - terrascripts(folder): contain the scripts that we call for the installation of packages, jenkins service, python service
 - variables(folder): contain all the .tfvars files with the variables and scripts you want to execute 
 - Makefile: automate terraform commands
+- Images(folder): screenshots
 
 # terraform
 
@@ -147,4 +149,6 @@ resource "google_compute_firewall" "default" {
 
 - After that go to Compute Engine -> VM Instances -> select the VM and EDIT -> Into **Network Tag** field add the name of 
 the firewall rule
+
+![](https://github.com/Abrams88/terraform/blob/master/images/firewall_GCP.png)
 
