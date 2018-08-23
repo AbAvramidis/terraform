@@ -150,5 +150,7 @@ resource "google_compute_firewall" "default" {
 - After that go to Compute Engine -> VM Instances -> select the VM and EDIT -> Into **Network Tag** field add the name of 
 the firewall rule
 
+![](https://github.com/Abrams88/terraform/blob/master/images/firewall_GCP_VPC.png)
+
 ![](https://github.com/Abrams88/terraform/blob/master/images/firewall_GCP.png)
 
