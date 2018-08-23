@@ -84,3 +84,18 @@ You can redirect the installation process into a .txt log file by:
 ```sh
  terraform apply -var-file=variables/jenkins.tfvars | tee log.txt
 ```
+
+- Create a **Makefile** that executes the "terraform apply" command by giving as arguments the "variable path" and the ".tfvars" file 
+that you want. Assuming that you have create multiple .tfvars files with different scripts or commands.
+```sh
+.PHONY = terravm
+script_path = "variables"
+script_tfvars = "python.tfvars"
+
+terravm:
+        @terraform apply -auto-approve -var-file=${script_path}/${script_tfvars}
+```
+
+ - After that just execute the command:
+ 
+        make terravm
