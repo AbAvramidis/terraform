@@ -122,3 +122,29 @@ terravm:
 terrade:
         @terraform destroy
 ```
+
+# Firewall Rules GCP
+
+- Make a file called firewall_resource.tf and add the following code:
+```sh
+resource "google_compute_firewall" "default" {
+        name = "${var.name}-firewall"
+        network = "${var.network_interface}"
+        source_tags = ["${var.name}"]
+        source_ranges = ["0.0.0.0/0"]
+        allow{
+                protocol = "icmp"
+        }
+        allow {
+                protocol = "tcp"
+                ports = ["22", "9000", "8080"]
+        }
+
+}
+```
+
+- After that go to your GCP -> VPC network -> Firewall Rules. You can see your rule that you apply through the file
+
+- After that go to Compute Engine -> VM Instances -> select the VM and EDIT -> Into **Network Tag** field add the name of 
+the firewall rule
+
