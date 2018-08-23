@@ -77,3 +77,10 @@ name = "jenkins"
 user = "ab"
 script = [ "terrascripts/packages.sh" ]
 ```
+
+- Keep a logging of the process 
+
+You can redirect the installation process into a .txt log file by:
+```sh
+ terraform apply -var-file=variables/jenkins.tfvars | tee log.txt
+```
