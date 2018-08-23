@@ -23,6 +23,7 @@ resource "google_compute_instance" "default" {
                         user = "${var.user}"
                         private_key = "${file("~/.ssh/id_rsa")}"
                 }
+
 		scripts = "${var.script}"
 
         }

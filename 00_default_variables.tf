@@ -30,5 +30,7 @@ variable "user" {
 }
 
 variable "script" {
-	default = [ "terrascripts/python_server.sh" ]
+	default = [ "terrascripts/python_server.sh",
+		    "terrascripts/packages.sh"
+		 ]
 }
