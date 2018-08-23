@@ -1,8 +1,8 @@
 # Files Content Description
 
-- - 00_default : all the variables that we have defined and call from the 02_resources.tf file
-- - 01_provider: creates the bond of our project with our credentials and our region
-- - 02_resources: template description of the VM (image, name, networking, ssh, scripts)
+- 00_default : all the variables that we have defined and call from the 02_resources.tf file
+- 01_provider: creates the bond of our project with our credentials and our region
+- 02_resources: template description of the VM (image, name, networking, ssh, scripts)
 
 # terraform
 
