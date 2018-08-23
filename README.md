@@ -4,7 +4,8 @@
 - 01_provider: creates the bond of our project with our credentials and our region
 - 02_resources: template description of the VM (image, name, networking, ssh, scripts)
 - terrascripts(folder): contain the scripts that we call for the installation of packages, jenkins service, python service
-
+- variables(folder): contain all the .tfvars files with the variables and scripts you want to execute 
+- Makefile: automate terraform commands
 
 # terraform
 
